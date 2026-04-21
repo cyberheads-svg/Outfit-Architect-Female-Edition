@@ -6,239 +6,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Outfit Architect: Female Edition</title>
 <style>
-  /* system fonts */
-
-:root {
-–bg: #0c0b0e;
-–panel: #131118;
-–border: #22202a;
-–border2: #332f40;
-–text: #d4cee0;
-–muted: #6a6278;
-–dim: #2a2535;
-–spring: #f9a8d4;
-–summer: #86efac;
-–autumn: #fcd34d;
-–winter: #93c5fd;
-–mono: ‘Courier New’, ‘Lucida Console’, monospace;
-–serif: Georgia, ‘Times New Roman’, serif;
-}
-
-- { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-background: var(–bg);
-color: var(–text);
-font-family: var(–mono);
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 48px 20px 60px;
-}
-
-header { text-align: center; margin-bottom: 36px; }
-
-.eyebrow {
-font-size: 10px;
-letter-spacing: 0.4em;
-text-transform: uppercase;
-color: var(–muted);
-margin-bottom: 10px;
-}
-
-h1 {
-font-family: var(–serif);
-font-style: italic;
-font-size: clamp(28px, 5vw, 46px);
-color: #fff;
-font-weight: 300;
-line-height: 1.1;
-margin-bottom: 4px;
-}
-
-h1 span { color: var(–spring); }
-
-.counter { font-size: 10px; color: var(–dim); margin-top: 8px; letter-spacing: 0.2em; }
-
-/* Season Selector */
-.season-selector {
-display: flex;
-gap: 8px;
-margin-bottom: 24px;
-width: 100%;
-max-width: 560px;
-}
-
-.season-btn {
-flex: 1;
-padding: 10px 0;
-background: transparent;
-border: 1px solid var(–border);
-color: var(–muted);
-font-family: var(–mono);
-font-size: 10px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-cursor: pointer;
-transition: all 0.2s;
-}
-
-.season-btn:hover { border-color: var(–border2); color: var(–text); }
-.season-btn.active-spring { border-color: var(–spring); color: var(–spring); background: #1a0f14; }
-.season-btn.active-summer { border-color: var(–summer); color: var(–summer); background: #0f1a12; }
-.season-btn.active-autumn { border-color: var(–autumn); color: var(–autumn); background: #1a1710; }
-.season-btn.active-winter { border-color: var(–winter); color: var(–winter); background: #0f1218; }
-
-.card {
-width: 100%;
-max-width: 560px;
-background: var(–panel);
-border: 1px solid var(–border);
-padding: 32px;
-margin-bottom: 20px;
-}
-
-.empty-state { text-align: center; padding: 40px 0; color: var(–dim); }
-.empty-icon { font-size: 40px; margin-bottom: 12px; opacity: 0.5; }
-.empty-text { font-size: 12px; line-height: 1.7; letter-spacing: 0.05em; }
-
-.fields { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
-
-.field { display: grid; grid-template-columns: 100px 1fr; gap: 12px; align-items: start; }
-
-.field-label {
-font-size: 9px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–muted);
-padding-top: 4px;
-line-height: 1.4;
-}
-
-.field-value {
-font-family: var(–serif);
-font-style: italic;
-font-size: 17px;
-line-height: 1.4;
-}
-
-.rare-badge {
-font-family: var(–mono);
-font-size: 8px;
-letter-spacing: 0.15em;
-text-transform: uppercase;
-padding: 1px 6px;
-border: 1px solid currentColor;
-opacity: 0.6;
-margin-left: 8px;
-vertical-align: middle;
-font-style: normal;
-}
-
-.divider { border: none; border-top: 1px solid var(–border); margin-bottom: 20px; }
-
-.prompt-label {
-font-size: 9px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-color: var(–muted);
-margin-bottom: 10px;
-}
-
-.prompt-text {
-font-family: var(–mono);
-font-size: 11px;
-color: var(–muted);
-line-height: 1.9;
-margin-bottom: 14px;
-word-break: break-word;
-}
-
-.copy-btn {
-background: transparent;
-border: 1px solid var(–border2);
-color: var(–muted);
-padding: 7px 18px;
-font-size: 10px;
-letter-spacing: 0.2em;
-text-transform: uppercase;
-cursor: pointer;
-font-family: var(–mono);
-transition: all 0.15s;
-}
-
-.copy-btn:hover { border-color: var(–spring); color: var(–spring); }
-.copy-btn.copied { border-color: var(–summer); color: var(–summer); }
-
-.generate-btn {
-width: 100%;
-max-width: 560px;
-background: transparent;
-border: 1px solid #3a2a4a;
-color: var(–spring);
-padding: 16px;
-font-size: 11px;
-letter-spacing: 0.35em;
-text-transform: uppercase;
-cursor: pointer;
-font-family: var(–mono);
-transition: all 0.2s;
-margin-bottom: 12px;
-}
-
-.generate-btn:hover { background: #1a0f18; border-color: var(–spring); }
-
-.save-btn {
-width: 100%;
-max-width: 560px;
-background: transparent;
-border: 1px solid var(–border);
-color: var(–muted);
-padding: 12px;
-font-size: 10px;
-letter-spacing: 0.25em;
-text-transform: uppercase;
-cursor: pointer;
-font-family: var(–mono);
-transition: all 0.2s;
-margin-bottom: 40px;
-}
-
-.save-btn:hover { border-color: var(–border2); color: var(–text); }
-
-.saved-section { width: 100%; max-width: 560px; }
-
-.saved-title {
-font-size: 10px;
-letter-spacing: 0.3em;
-text-transform: uppercase;
-color: var(–muted);
-margin-bottom: 16px;
-padding-bottom: 10px;
-border-bottom: 1px solid var(–border);
-}
-
-.saved-item {
-background: var(–panel);
-border: 1px solid var(–border);
-padding: 12px 16px;
-margin-bottom: 8px;
-font-size: 11px;
-color: var(–muted);
-line-height: 1.7;
-cursor: pointer;
-transition: border-color 0.15s;
-}
-
-.saved-item:hover { border-color: var(–border2); color: var(–text); }
-
-footer { margin-top: 20px; font-size: 10px; color: var(–dim); letter-spacing: 0.15em; text-align: center; }
-
-@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-.animate-in { animation: fadeIn 0.3s ease forwards; }
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&display=swap');
+  :root{
+    --bg:#0c0b0e;--panel:#131118;--border:#22202a;--border2:#332f40;
+    --text:#d4cee0;--muted:#6a6278;--dim:#2a2535;
+    --spring:#f9a8d4;--summer:#86efac;--autumn:#fcd34d;--winter:#93c5fd;
+    --mono:'DM Mono',monospace;--serif:'DM Serif Display',serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:#0c0b0e}
+  body{background:var(--bg);color:var(--text);font-family:var(--mono);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:48px 20px 60px}
+  header{text-align:center;margin-bottom:36px}
+  .eyebrow{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  h1{font-family:var(--serif);font-style:italic;font-size:clamp(26px,5vw,42px);color:#fff;font-weight:400;line-height:1.1;margin-bottom:4px}
+  h1 span{color:var(--spring)}
+  .counter{font-size:10px;color:var(--dim);margin-top:8px;letter-spacing:.2em}
+  .season-selector{display:flex;gap:8px;margin-bottom:24px;width:100%;max-width:560px}
+  .season-btn{flex:1;padding:10px 0;background:transparent;border:1px solid var(--border);color:var(--muted);font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:all .2s}
+  .season-btn:hover{border-color:var(--border2);color:var(--text)}
+  .season-btn.active-spring{border-color:var(--spring);color:var(--spring);background:#1a0f14}
+  .season-btn.active-summer{border-color:var(--summer);color:var(--summer);background:#0f1a12}
+  .season-btn.active-autumn{border-color:var(--autumn);color:var(--autumn);background:#1a1710}
+  .season-btn.active-winter{border-color:var(--winter);color:var(--winter);background:#0f1218}
+  .card{width:100%;max-width:560px;background:var(--panel);border:1px solid var(--border);padding:32px;margin-bottom:20px}
+  .empty-state{text-align:center;padding:40px 0;color:var(--dim)}
+  .empty-icon{font-size:40px;margin-bottom:12px;opacity:.5}
+  .empty-text{font-size:12px;line-height:1.7;letter-spacing:.05em}
+  .fields{display:flex;flex-direction:column;gap:16px;margin-bottom:28px}
+  .field{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:start}
+  .field-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-top:4px;line-height:1.4}
+  .field-value{font-family:var(--serif);font-style:italic;font-size:16px;line-height:1.4}
+  .rare-badge{font-family:var(--mono);font-size:8px;letter-spacing:.15em;text-transform:uppercase;padding:1px 6px;border:1px solid currentColor;opacity:.6;margin-left:8px;vertical-align:middle;font-style:normal}
+  .divider{border:none;border-top:1px solid var(--border);margin-bottom:20px}
+  .prompt-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .prompt-text{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:14px;word-break:break-word}
+  .copy-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);padding:7px 18px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;font-family:var(--mono);transition:all .15s}
+  .copy-btn:hover{border-color:var(--spring);color:var(--spring)}
+  .copy-btn.copied{border-color:var(--summer);color:var(--summer)}
+  .generate-btn{width:100%;max-width:560px;background:transparent;border:1px solid #3a2a4a;color:var(--spring);padding:16px;font-size:11px;letter-spacing:.35em;text-transform:uppercase;cursor:pointer;font-family:var(--mono);transition:all .2s;margin-bottom:12px}
+  .generate-btn:hover{background:#1a0f18;border-color:var(--spring)}
+  .save-btn{width:100%;max-width:560px;background:transparent;border:1px solid var(--border);color:var(--muted);padding:12px;font-size:10px;letter-spacing:.25em;text-transform:uppercase;cursor:pointer;font-family:var(--mono);transition:all .2s;margin-bottom:40px}
+  .save-btn:hover{border-color:var(--border2);color:var(--text)}
+  .saved-section{width:100%;max-width:560px}
+  .saved-title{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+  .saved-item{background:var(--panel);border:1px solid var(--border);padding:12px 16px;margin-bottom:8px;font-size:11px;color:var(--muted);line-height:1.7;cursor:pointer;transition:border-color .15s}
+  .saved-item:hover{border-color:var(--border2);color:var(--text)}
+  footer{margin-top:20px;font-size:10px;color:var(--dim);letter-spacing:.15em;text-align:center}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+  .animate-in{animation:fadeIn .3s ease forwards}
 </style>
-
 </head>
 <body>
 
