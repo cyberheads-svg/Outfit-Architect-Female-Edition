@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ja" style="background:#0c0b0e">
 <head>
 <meta charset="UTF-8">
@@ -17,43 +16,46 @@
   html{background:#0c0b0e}
   body{background:var(--bg);color:var(--text);font-family:var(--mono);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:48px 20px 60px}
   header{text-align:center;margin-bottom:36px}
-  .eyebrow{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+ .eyebrow{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
   h1{font-family:var(--serif);font-style:italic;font-size:clamp(26px,5vw,42px);color:#fff;font-weight:400;line-height:1.1;margin-bottom:4px}
   h1 span{color:var(--spring)}
-  .counter{font-size:10px;color:var(--dim);margin-top:8px;letter-spacing:.2em}
-  .season-selector{display:flex;gap:8px;margin-bottom:24px;width:100%;max-width:560px}
-  .season-btn{flex:1;padding:10px 0;background:transparent;border:1px solid var(--border);color:var(--muted);font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:all .2s}
-  .season-btn:hover{border-color:var(--border2);color:var(--text)}
-  .season-btn.active-spring{border-color:var(--spring);color:var(--spring);background:#1a0f14}
-  .season-btn.active-summer{border-color:var(--summer);color:var(--summer);background:#0f1a12}
-  .season-btn.active-autumn{border-color:var(--autumn);color:var(--autumn);background:#1a1710}
-  .season-btn.active-winter{border-color:var(--winter);color:var(--winter);background:#0f1218}
-  .card{width:100%;max-width:560px;background:var(--panel);border:1px solid var(--border);padding:32px;margin-bottom:20px}
-  .empty-state{text-align:center;padding:40px 0;color:var(--dim)}
-  .empty-icon{font-size:40px;margin-bottom:12px;opacity:.5}
-  .empty-text{font-size:12px;line-height:1.7;letter-spacing:.05em}
-  .fields{display:flex;flex-direction:column;gap:16px;margin-bottom:28px}
-  .field{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:start}
-  .field-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-top:4px;line-height:1.4}
-  .field-value{font-family:var(--serif);font-style:italic;font-size:16px;line-height:1.4}
-  .rare-badge{font-family:var(--mono);font-size:8px;letter-spacing:.15em;text-transform:uppercase;padding:1px 6px;border:1px solid currentColor;opacity:.6;margin-left:8px;vertical-align:middle;font-style:normal}
-  .divider{border:none;border-top:1px solid var(--border);margin-bottom:20px}
-  .prompt-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-  .prompt-text{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:14px;word-break:break-word}
-  .copy-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);padding:7px 18px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;font-family:var(--mono);transition:all .15s}
-  .copy-btn:hover{border-color:var(--spring);color:var(--spring)}
-  .copy-btn.copied{border-color:var(--summer);color:var(--summer)}
-  .generate-btn{width:100%;max-width:560px;background:transparent;border:1px solid #3a2a4a;color:var(--spring);padding:16px;font-size:11px;letter-spacing:.35em;text-transform:uppercase;cursor:pointer;font-family:var(--mono);transition:all .2s;margin-bottom:12px}
-  .generate-btn:hover{background:#1a0f18;border-color:var(--spring)}
-  .save-btn{width:100%;max-width:560px;background:transparent;border:1px solid var(--border);color:var(--muted);padding:12px;font-size:10px;letter-spacing:.25em;text-transform:uppercase;cursor:pointer;font-family:var(--mono);transition:all .2s;margin-bottom:40px}
-  .save-btn:hover{border-color:var(--border2);color:var(--text)}
-  .saved-section{width:100%;max-width:560px}
-  .saved-title{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
-  .saved-item{background:var(--panel);border:1px solid var(--border);padding:12px 16px;margin-bottom:8px;font-size:11px;color:var(--muted);line-height:1.7;cursor:pointer;transition:border-color .15s}
-  .saved-item:hover{border-color:var(--border2);color:var(--text)}
+ .counter{font-size:10px;color:var(--dim);margin-top:8px;letter-spacing:.2em}
+ .season-selector{display:flex;gap:8px;margin-bottom:24px;width:100%;max-width:560px}
+ .season-btn{flex:1;padding:10px 0;background:transparent;border:1px solid var(--border);color:var(--muted);font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:all.2s}
+ .season-btn:hover{border-color:var(--border2);color:var(--text)}
+ .season-btn.active-spring{border-color:var(--spring);color:var(--spring);background:#1a0f14}
+ .season-btn.active-summer{border-color:var(--summer);color:var(--summer);background:#0f1a12}
+ .season-btn.active-autumn{border-color:var(--autumn);color:var(--autumn);background:#1a1710}
+ .season-btn.active-winter{border-color:var(--winter);color:var(--winter);background:#0f1218}
+ .card{width:100%;max-width:560px;background:var(--panel);border:1px solid var(--border);padding:32px;margin-bottom:20px}
+ .empty-state{text-align:center;padding:40px 0;color:var(--dim)}
+ .empty-icon{font-size:40px;margin-bottom:12px;opacity:.5}
+ .empty-text{font-size:12px;line-height:1.7;letter-spacing:.05em}
+ .fields{display:flex;flex-direction:column;gap:0;margin-bottom:28px}
+ .field-row{display:grid;grid-template-columns:100px 1fr auto;gap:12px;align-items:start;padding:14px 0;border-bottom:1px solid var(--border)}
+ .field-row:last-child{border-bottom:none}
+ .field-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-top:4px;line-height:1.4}
+ .field-value{font-family:var(--serif);font-style:italic;font-size:16px;line-height:1.4}
+ .reroll-btn{background:transparent;border:none;color:var(--muted);font-size:14px;cursor:pointer;padding:2px 6px;transition:color.15s}
+ .reroll-btn:hover{color:var(--spring)}
+ .divider{border:none;border-top:1px solid var(--border);margin-bottom:20px}
+ .prompt-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+ .prompt-textarea{width:100%;background:#0a080c;border:1px solid var(--border2);color:var(--muted);font-family:var(--mono);font-size:12px;line-height:1.8;padding:12px;resize:vertical;min-height:80px;margin-bottom:14px}
+ .prompt-textarea:focus{outline:none;border-color:var(--spring)}
+ .copy-btn{background:transparent;border:1px solid var(--border2);color:var(--muted);padding:7px 18px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;font-family:var(--mono);transition:all.15s}
+ .copy-btn:hover{border-color:var(--spring);color:var(--spring)}
+ .copy-btn.copied{border-color:var(--summer);color:var(--summer)}
+ .generate-btn{width:100%;max-width:560px;background:transparent;border:1px solid #3a2a4a;color:var(--spring);padding:16px;font-size:11px;letter-spacing:.35em;text-transform:uppercase;cursor:pointer;font-family:var(--mono);transition:all.2s;margin-bottom:12px}
+ .generate-btn:hover{background:#1a0f18;border-color:var(--spring)}
+ .save-btn{width:100%;max-width:560px;background:transparent;border:1px solid var(--border);color:var(--muted);padding:12px;font-size:10px;letter-spacing:.25em;text-transform:uppercase;cursor:pointer;font-family:var(--mono);transition:all.2s;margin-bottom:40px}
+ .save-btn:hover{border-color:var(--border2);color:var(--text)}
+ .saved-section{width:100%;max-width:560px}
+ .saved-title{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+ .saved-item{background:var(--panel);border:1px solid var(--border);padding:12px 16px;margin-bottom:8px;font-size:11px;color:var(--muted);line-height:1.7;cursor:pointer;transition:border-color.15s}
+ .saved-item:hover{border-color:var(--border2);color:var(--text)}
   footer{margin-top:20px;font-size:10px;color:var(--dim);letter-spacing:.15em;text-align:center}
   @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-  .animate-in{animation:fadeIn .3s ease forwards}
+ .animate-in{animation:fadeIn.3s ease forwards}
 </style>
 </head>
 <body>
@@ -61,7 +63,7 @@
 <header>
   <div class="eyebrow">Image AI · Prompt Generator</div>
   <h1>Outfit <span>Architect</span></h1>
-  <div class="eyebrow" style="margin-top:4px">Female Edition v1.0</div>
+  <div class="eyebrow" style="margin-top:4px">Female Edition v1.1</div>
   <div class="counter" id="counter">— generated</div>
 </header>
 
@@ -88,12 +90,13 @@
   <div id="savedList"></div>
 </div>
 
-<footer>100 × 100 × 100 × 100 patterns · seasonal logic · GitHub Pages ready</footer>
+<footer>100 × 100 × 100 patterns · 50 colors per season · reroll enabled</footer>
 
 <script>
 let currentSeason = "spring";
 let generated = 0;
 let currentPrompt = "";
+let lastVals = {};
 
 function setSeason(s) {
   currentSeason = s;
@@ -101,337 +104,135 @@ function setSeason(s) {
     b.className = "season-btn";
     if (b.dataset.season === s) b.classList.add("active-" + s);
   });
+  document.querySelector("h1 span").style.color = getComputedStyle(document.documentElement).getPropertyValue('--'+s);
 }
 
 const pick = arr => arr[Math.floor(Math.random() * arr.length)];
 const pickN = (arr, n) => [...arr].sort(() => 0.5 - Math.random()).slice(0, Math.min(n, arr.length));
 
-const STYLES = [
-  "dark academia","light academia","cottagecore","goblincore","fairycore","witchcore","royalcore","balletcore",
-  "streetwear","techwear","normcore","gorpcore","workwear chic","utilitarian","military surplus inspired",
-  "Y2K revival","80s power dressing","70s bohemian","60s mod","50s vintage","40s wartime glamour",
-  "Japanese Harajuku","Japanese Lolita","gyaru","mori girl","Shibuya casual","Tokyo street fashion","Kyoto modern wafuku",
-  "Parisian chic","French girl casual","Italian tailored","Scandinavian minimalist","British prep","East London street",
-  "old money","quiet luxury","coastal grandmother","trophy wife aesthetic","mob wife aesthetic","clean girl",
-  "e-girl","soft girl","VSCO girl","Pinterest girl","tumblr aesthetic","indie sleaze revival",
-  "punk","goth","cyber goth","nu-goth","pastel goth","visual kei inspired","emo revival",
-  "boho chic","festival fashion","hippie revival","earthy naturalist","forager aesthetic",
-  "ballet dancer off duty","equestrian inspired","tennis chic","ski lodge fashion","surf casual",
-  "maximalist color clash","monochromatic dressing","tonal dressing","print mixing","pattern clash",
-  "deconstructed tailoring","avant-garde editorial","high fashion editorial","runway inspired","couture casual",
-  "vintage thrift mix","granny chic","eccentric librarian","art teacher aesthetic","museum curator",
-  "romantic feminine","dark romantic","Victorian inspired","Edwardian influenced","Regency revival",
-  "athleisure luxe","elevated sporty","gym-to-street","dancer casual","pilates girl",
-  "coastal casual","Mediterranean summer","island resort","tropicana","beach club",
-  "urban explorer","city commuter chic","café regular","gallery hopper","night out downtown"
-];
+const STYLES = ["dark academia","light academia","cottagecore","goblincore","fairycore","witchcore","royalcore","balletcore","streetwear","techwear","normcore","gorpcore","workwear chic","utilitarian","military surplus inspired","Y2K revival","80s power dressing","70s bohemian","60s mod","50s vintage","40s wartime glamour","Japanese Harajuku","Japanese Lolita","gyaru","mori girl","Shibuya casual","Tokyo street fashion","Kyoto modern wafuku","Parisian chic","French girl casual","Italian tailored","Scandinavian minimalist","British prep","East London street","old money","quiet luxury","coastal grandmother","trophy wife aesthetic","mob wife aesthetic","clean girl","e-girl","soft girl","VSCO girl","Pinterest girl","tumblr aesthetic","indie sleaze revival","punk","goth","cyber goth","nu-goth","pastel goth","visual kei inspired","emo revival","boho chic","festival fashion","hippie revival","earthy naturalist","forager aesthetic","ballet dancer off duty","equestrian inspired","tennis chic","ski lodge fashion","surf casual","maximalist color clash","monochromatic dressing","tonal dressing","print mixing","pattern clash","deconstructed tailoring","avant-garde editorial","high fashion editorial","runway inspired","couture casual","vintage thrift mix","granny chic","eccentric librarian","art teacher aesthetic","museum curator","romantic feminine","dark romantic","Victorian inspired","Edwardian influenced","Regency revival","athleisure luxe","elevated sporty","gym-to-street","dancer casual","pilates girl","coastal casual","Mediterranean summer","island resort","tropicana","beach club","urban explorer","city commuter chic","café regular","gallery hopper","night out downtown"];
 
-const TOPS = [
-  "fitted ribbed turtleneck","oversized graphic tee","cropped linen shirt","sheer organza blouse","silk slip top",
-  "off-shoulder peasant blouse","structured peplum top","crochet crop top","halter neck top","bralette with blazer",
-  "vintage band tee knotted at waist","button-down shirt half-tucked","corset top","bustier","strapless tube top",
-  "long-sleeve bodysuit","mesh top over bra","knit tank top","sleeveless turtleneck","ruffle-front blouse",
-  "wrap top in floral print","denim shirt unbuttoned over white tee","striped Breton top","lace-trimmed camisole","satin bias-cut top",
-  "hoodie cropped","zip-up athletic jacket worn as top","sports bra with sheer overlay","smocked peasant top","tie-front blouse",
-  "Victorian high-neck blouse","cable knit sweater","oversized chunky knit","cropped cardigan","deep V-neck blouse",
-  "poet sleeve blouse","balloon sleeve top","cold shoulder top","one-shoulder top","asymmetric hem top",
-  "tailored waistcoat","pinstripe vest","embroidered folk blouse","hand-painted tee","acid wash crop top",
-  "fitted polo shirt","rugby stripe shirt","cycling jersey","compression long-sleeve","thermal henley",
-  "shrunken blazer as top","deconstructed shirt","raw hem crop top","leather bustier","vinyl crop top",
-  "floral print kimono top","satin bomber worn open","oversized linen button-down","broderie anglaise top","pintuck blouse",
-  "velvet top","brocade top","sequined top","metallic knit top","foil print tee",
-  "denim corset top","patchwork top","tie-dye tee","ombre knit top","geometric print blouse",
-  "organic cotton tee","hemp linen shirt","bamboo knit top","upcycled vintage top","deadstock fabric top",
-  "slip dress worn as top","vintage slip layered over tee","nightgown as daywear top","lingerie-inspired top","sheer lace top",
-  "macramé top","weave pattern top","jacquard blouse","tapestry-style top","woven cotton top",
-  "technical fabric performance top","moisture-wicking base layer","seamless knit top","ribbed athletic crop","compression sports top",
-  "folk embroidered blouse","ikat print top","batik top","block-printed cotton top","hand-loomed top",
-  "sculpted structured top","architectural pleat top","origami fold blouse","3D flower appliqué top","sculptural knit top"
-];
+const TOPS = ["fitted ribbed turtleneck","oversized graphic tee","cropped linen shirt","sheer organza blouse","silk slip top","off-shoulder peasant blouse","structured peplum top","crochet crop top","halter neck top","bralette with blazer","vintage band tee knotted at waist","button-down shirt half-tucked","corset top","bustier","strapless tube top","long-sleeve bodysuit","mesh top over bra","knit tank top","sleeveless turtleneck","ruffle-front blouse","wrap top in floral print","denim shirt unbuttoned over white tee","striped Breton top","lace-trimmed camisole","satin bias-cut top","hoodie cropped","zip-up athletic jacket worn as top","sports bra with sheer overlay","smocked peasant top","tie-front blouse","Victorian high-neck blouse","cable knit sweater","oversized chunky knit","cropped cardigan","deep V-neck blouse","poet sleeve blouse","balloon sleeve top","cold shoulder top","one-shoulder top","asymmetric hem top","tailored waistcoat","pinstripe vest","embroidered folk blouse","hand-painted tee","acid wash crop top","fitted polo shirt","rugby stripe shirt","cycling jersey","compression long-sleeve","thermal henley","shrunken blazer as top","deconstructed shirt","raw hem crop top","leather bustier","vinyl crop top","floral print kimono top","satin bomber worn open","oversized linen button-down","broderie anglaise top","pintuck blouse","velvet top","brocade top","sequined top","metallic knit top","foil print tee","denim corset top","patchwork top","tie-dye tee","ombre knit top","geometric print blouse","organic cotton tee","hemp linen shirt","bamboo knit top","upcycled vintage top","deadstock fabric top","slip dress worn as top","vintage slip layered over tee","nightgown as daywear top","lingerie-inspired top","sheer lace top","macramé top","weave pattern top","jacquard blouse","tapestry-style top","woven cotton top","technical fabric performance top","moisture-wicking base layer","seamless knit top","ribbed athletic crop","compression sports top","folk embroidered blouse","ikat print top","batik top","block-printed cotton top","hand-loomed top","sculpted structured top","architectural pleat top","origami fold blouse","3D flower appliqué top","sculptural knit top"];
 
-const BOTTOMS = [
-  "wide-leg trousers in cream","tailored cigarette trousers","high-waist flared jeans","straight-leg vintage denim","baggy carpenter jeans",
-  "pleated midi skirt","bias-cut satin slip skirt","denim mini skirt","pleated micro skirt","asymmetric hem skirt",
-  "maxi floral skirt","tiered peasant skirt","wrap skirt in linen","knit pencil skirt","A-line wool skirt",
-  "leather mini skirt","faux leather trousers","vinyl pencil skirt","patent leather skirt","moto-style trousers",
-  "cargo trousers with multiple pockets","utility pants","parachute trousers","technical hiking trousers","drawstring joggers",
-  "tailored shorts","high-waist denim shorts","linen wide shorts","pleated bermuda shorts","athletic biker shorts",
-  "flowy palazzo trousers","harem pants","draped trousers","wide silk trousers","fluid crepe trousers",
-  "corduroy flares","velvet wide-leg trousers","brocade trousers","jacquard skirt","tapestry-print skirt",
-  "distressed ripped jeans","patchwork denim","tie-dye flares","acid wash jeans","vintage washed trousers",
-  "pinstripe trousers","checked trousers","houndstooth skirt","plaid mini skirt","tartan trousers",
-  "sports shorts","track pants","yoga flares","compression leggings","athletic skort",
-  "tulle midi skirt","organza layered skirt","sheer overlay skirt","lace skirt","chiffon maxi skirt",
-  "hand-embroidered skirt","folk print skirt","ikat trousers","batik wrap skirt","block-print maxi skirt",
-  "paper bag waist trousers","gathered waist skirt","shirred skirt","smocked midi skirt","elasticated wide trousers",
-  "wrap trousers","kilt-style skirt","sarong-style skirt","draped wrap skirt","pareo-style bottom",
-  "sculpted structured skirt","architectural paneled trousers","origami skirt","pleated sculptural trousers","3D texture skirt",
-  "knit tube skirt","ribbed midi skirt","crochet skirt","knit flare skirt","open-weave skirt",
-  "cropped flared trousers","culotte","gaucho trousers","pedal pushers","capri trousers",
-  "denim skirt with raw hem","distressed mini","bleached jeans","overdyed trousers","reverse-dye skirt"
-];
+const BOTTOMS = ["wide-leg trousers in cream","tailored cigarette trousers","high-waist flared jeans","straight-leg vintage denim","baggy carpenter jeans","pleated midi skirt","bias-cut satin slip skirt","denim mini skirt","pleated micro skirt","asymmetric hem skirt","maxi floral skirt","tiered peasant skirt","wrap skirt in linen","knit pencil skirt","A-line wool skirt","leather mini skirt","faux leather trousers","vinyl pencil skirt","patent leather skirt","moto-style trousers","cargo trousers with multiple pockets","utility pants","parachute trousers","technical hiking trousers","drawstring joggers","tailored shorts","high-waist denim shorts","linen wide shorts","pleated bermuda shorts","athletic biker shorts","flowy palazzo trousers","harem pants","draped trousers","wide silk trousers","fluid crepe trousers","corduroy flares","velvet wide-leg trousers","brocade trousers","jacquard skirt","tapestry-print skirt","distressed ripped jeans","patchwork denim","tie-dye flares","acid wash jeans","vintage washed trousers","pinstripe trousers","checked trousers","houndstooth skirt","plaid mini skirt","tartan trousers","sports shorts","track pants","yoga flares","compression leggings","athletic skort","tulle midi skirt","organza layered skirt","sheer overlay skirt","lace skirt","chiffon maxi skirt","hand-embroidered skirt","folk print skirt","ikat trousers","batik wrap skirt","block-print maxi skirt","paper bag waist trousers","gathered waist skirt","shirred skirt","smocked midi skirt","elasticated wide trousers","wrap trousers","kilt-style skirt","sarong-style skirt","draped wrap skirt","pareo-style bottom","sculpted structured skirt","architectural paneled trousers","origami skirt","pleated sculptural trousers","3D texture skirt","knit tube skirt","ribbed midi skirt","crochet skirt","knit flare skirt","open-weave skirt","cropped flared trousers","culotte","gaucho trousers","pedal pushers","capri trousers","denim skirt with raw hem","distressed mini","bleached jeans","overdyed trousers","reverse-dye skirt"];
 
 const OUTERWEAR = {
-  spring: [
-    "lightweight trench coat in camel","cropped denim jacket","linen blazer","cotton bomber jacket","sheer organza jacket",
-    "oversized blazer in pastel","double-breasted spring coat","belted wrap coat in pale blue","cropped leather jacket","windbreaker in soft pink",
-    "knit cardigan layered open","broderie anglaise jacket","printed kimono jacket","embroidered denim jacket","tie-dye denim jacket",
-    "tailored short jacket","military-inspired spring jacket","washed canvas jacket","cotton parka","transitional peacoat",
-    "vintage blazer thrifted","reworked suit jacket","deconstructed blazer","oversized shirt jacket","soft structured coat"
-  ],
+  spring: ["lightweight trench coat in camel","cropped denim jacket","linen blazer","cotton bomber jacket","sheer organza jacket","oversized blazer in pastel","double-breasted spring coat","belted wrap coat in pale blue","cropped leather jacket","windbreaker in soft pink","knit cardigan layered open","broderie anglaise jacket","printed kimono jacket","embroidered denim jacket","tie-dye denim jacket","tailored short jacket","military-inspired spring jacket","washed canvas jacket","cotton parka","transitional peacoat","vintage blazer thrifted","reworked suit jacket","deconstructed blazer","oversized shirt jacket","soft structured coat"],
   summer: [],
-  autumn: [
-    "oversized camel coat","plaid wool blazer","corduroy jacket","leather biker jacket","suede fringe jacket",
-    "double-breasted peacoat","checked wool coat","belted trench in rust","shearling-collar bomber","quilted vest layered",
-    "velvet blazer","brocade jacket","embroidered folk jacket","patchwork coat","vintage fur-trim coat",
-    "longline duster coat","wrap coat in burgundy","knit coat","boiled wool jacket","herringbone coat",
-    "military surplus field jacket","waxed cotton jacket","canvas work jacket","tech fleece","insulated puffer vest",
-    "cape coat","cocoon coat","opera coat","dramatic statement coat","sculptural structured coat"
-  ],
-  winter: [
-    "long wool overcoat in charcoal","puffer coat in midnight blue","shearling coat","faux fur statement coat","quilted down coat",
-    "belted wool coat in camel","double-breasted military coat","longline parka","technical ski jacket","insulated puffer jacket",
-    "bouclé coat","mohair coat","cashmere wrap coat","plaid oversized coat","checked blanket coat",
-    "leather trench coat","vinyl coat","patent cocoon coat","metallic puffer","reflective technical jacket",
-    "vintage fur coat","faux fur teddy coat","sherpa jacket","fleece-lined coat","curly shearling coat",
-    "cape coat with dramatic collar","sculptural architectural coat","deconstructed oversized coat","avant-garde wrap coat","statement maxi coat"
-  ]
+  autumn: ["oversized camel coat","plaid wool blazer","corduroy jacket","leather biker jacket","suede fringe jacket","double-breasted peacoat","checked wool coat","belted trench in rust","shearling-collar bomber","quilted vest layered","velvet blazer","brocade jacket","embroidered folk jacket","patchwork coat","vintage fur-trim coat","longline duster coat","wrap coat in burgundy","knit coat","boiled wool jacket","herringbone coat","military surplus field jacket","waxed cotton jacket","canvas work jacket","tech fleece","insulated puffer vest","cape coat","cocoon coat","opera coat","dramatic statement coat","sculptural structured coat"],
+  winter: ["long wool overcoat in charcoal","puffer coat in midnight blue","shearling coat","faux fur statement coat","quilted down coat","belted wool coat in camel","double-breasted military coat","longline parka","technical ski jacket","insulated puffer jacket","bouclé coat","mohair coat","cashmere wrap coat","plaid oversized coat","checked blanket coat","leather trench coat","vinyl coat","patent cocoon coat","metallic puffer","reflective technical jacket","vintage fur coat","faux fur teddy coat","sherpa jacket","fleece-lined coat","curly shearling coat","cape coat with dramatic collar","sculptural architectural coat","deconstructed oversized coat","avant-garde wrap coat","statement maxi coat"]
 };
 
-const FABRICS = [
-  "silk charmeuse","heavy satin","matte crepe","chiffon","georgette","organza","tulle","lace","broderie anglaise","eyelet cotton",
-  "raw denim","washed denim","stretch denim","selvage denim","coated denim",
-  "soft leather","distressed leather","patent leather","suede","nubuck",
-  "ribbed knit","cable knit","chunky wool knit","fine gauge jersey","waffle knit",
-  "linen","washed linen","heavy cotton canvas","cotton poplin","chambray",
-  "velvet","crushed velvet","velour","corduroy","brocade",
-  "wool tweed","herringbone wool","bouclé","cashmere","mohair",
-  "technical nylon","ripstop","Cordura nylon","parachute fabric","mesh fabric",
-  "vinyl","PVC","latex-effect","metallic foil fabric","reflective material",
-  "sheer chiffon overlay","semi-sheer organza","transparent mesh","burnout velvet","devore fabric",
-  "jacquard","tapestry weave","ikat","batik","block-print cotton",
-  "tie-dye cotton","acid-wash denim","ombre fabric","patchwork","quilted fabric",
-  "organic cotton","hemp linen","recycled polyester","bamboo jersey","deadstock fabric",
-  "sequined fabric","beaded fabric","embroidered fabric","appliqué fabric","hand-painted fabric",
-  "plaid wool","tartan","houndstooth","windowpane check","pinstripe fabric",
-  "faux fur","sherpa fleece","teddy bear fabric","boiled wool","felt",
-  "silk satin","silk taffeta","silk dupioni","raw silk","habotai silk",
-  "printed cotton","digital print fabric","abstract print","floral print fabric","geometric print fabric"
-];
+const FABRICS = ["silk charmeuse","heavy satin","matte crepe","chiffon","georgette","organza","tulle","lace","broderie anglaise","eyelet cotton","raw denim","washed denim","stretch denim","selvage denim","coated denim","soft leather","distressed leather","patent leather","suede","nubuck","ribbed knit","cable knit","chunky wool knit","fine gauge jersey","waffle knit","linen","washed linen","heavy cotton canvas","cotton poplin","chambray","velvet","crushed velvet","velour","corduroy","brocade","wool tweed","herringbone wool","bouclé","cashmere","mohair","technical nylon","ripstop","Cordura nylon","parachute fabric","mesh fabric","vinyl","PVC","latex-effect","metallic foil fabric","reflective material","sheer chiffon overlay","semi-sheer organza","transparent mesh","burnout velvet","devore fabric","jacquard","tapestry weave","ikat","batik","block-print cotton","tie-dye cotton","acid-wash denim","ombre fabric","patchwork","quilted fabric","organic cotton","hemp linen","recycled polyester","bamboo jersey","deadstock fabric","sequined fabric","beaded fabric","embroidered fabric","appliqué fabric","hand-painted fabric","plaid wool","tartan","houndstooth","windowpane check","pinstripe fabric","faux fur","sherpa fleece","teddy bear fabric","boiled wool","felt","silk satin","silk taffeta","silk dupioni","raw silk","habotai silk","printed cotton","digital print fabric","abstract print","floral print fabric","geometric print fabric"];
 
 const COLORS = {
-  spring: [
-    "soft blush and ivory","lavender and cream","sage green and white","powder blue and blush","lilac and pale yellow",
-    "mint and coral","peach and sky blue","rose quartz and fog","cherry blossom pink and grey","butter yellow and soft white",
-    "pastel rainbow mix","pale violet and ecru","soft terracotta and cream","washed rose and linen","dusty pink and warm grey",
-    "celadon and ivory","pale aqua and blush","soft periwinkle and white","light moss and cream","nude and soft pink",
-    "warm sand and peach","muted coral and sage","blush pink monochrome","soft lilac monochrome","pale mint monochrome",
-    "white and gold","cream and silver","soft beige tonal","warm neutral tonal","pale pastels mixed",
-    "sakura pink and fresh green","wisteria purple and cream","pale lemon and sky","apricot and mist grey","seafoam and shell pink",
-    "pistachio and vanilla","peony pink and sage","lilac grey and butter","dawn pink and cloud white","spring meadow mix",
-    "pale peach and eucalyptus","soft mauve and linen","baby blue and buttercream","mint julep and blush","orchid and pale grey",
-    "strawberry milk and cream","lavender fog and ivory","pale daffodil and sage","coral blush and sand","soft hydrangea blue"
-  ],
-  summer: [
-    "cobalt blue and white","hot coral and gold","sunshine yellow and sky blue","vivid orange and turquoise","electric pink and lime",
-    "tropical red and emerald","bright fuchsia and navy","neon yellow and black","aqua and coral","vivid violet and gold",
-    "white and bright pop of color","crisp linen white","bleached denim and white","all white","ivory and tan",
-    "bold color block","saturated primary mix","tropical multicolor print","vivid stripe","bold geometric color",
-    "terracotta and sand","warm amber and cream","golden yellow and rust","burnt orange and ivory","papaya and beige",
-    "ocean blue and seafoam","turquoise and sandy beige","lagoon teal and white","deep sea blue and coral","wave blue tonal",
-    "jungle green and yellow","palm print green","botanical mix","mango orange and leafy green","tropical floral mix",
-    "watermelon pink and mint","sunset orange and purple","coral reef mix","poolside turquoise and white","lemon zest and navy",
-    "hibiscus red and palm green","marigold and sky","flamingo pink and sand","coconut white and aqua","sangria and lime",
-    "citrus burst mix","island blue and coral","tropicana yellow and green","sea glass and white","hot pink and tangerine"
-  ],
-  autumn: [
-    "burnt sienna and cream","rust and camel","deep olive and tan","chocolate brown and ivory","cognac and off-white",
-    "burgundy and blush","wine red and grey","deep plum and nude","maroon and cream","oxblood and sand",
-    "forest green and rust","hunter green and camel","deep emerald and gold","sage and terracotta","moss and amber",
-    "mustard yellow and brown","golden amber and burgundy","harvest orange and chocolate","pumpkin and cream","ochre and navy",
-    "warm earthy tonal","brown monochrome","rust monochrome","deep olive monochrome","autumnal color gradient",
-    "navy and rust","dark teal and camel","deep indigo and amber","slate blue and terracotta","charcoal and cognac",
-    "plaid mix warm tones","houndstooth black and tan","checked russet and cream","tartan earth tones","tweed mixed warm",
-    "maple red and gold","chestnut brown and cream","spiced cider and beige","smoky plum and copper","fig and olive",
-    "burnt orange and forest","mahogany and mustard","deep cranberry and taupe","amber glow and charcoal","autumn fog grey and rust",
-    "pumpkin spice and cream","walnut and sage","brandy and camel","russet and pine","harvest wheat and burgundy"
-  ],
-  winter: [
-    "midnight black and ivory","charcoal and white","deep navy and cream","slate grey and silver","graphite and pale blue",
-    "pure black monochrome","all grey tonal","black and gold","black and silver","black and deep red",
-    "deep burgundy and black","midnight plum and silver","forest green and black","deep teal and charcoal","navy and midnight blue",
-    "crisp white and ice blue","winter white tonal","ivory and pearl","snow white and silver","white and pale gold",
-    "rich camel and black","warm brown and cream","cognac and ivory","chocolate and off-white","warm taupe and white",
-    "deep red and cream","holly green and red","midnight blue and gold","emerald and black","jewel tones mixed",
-    "metallic silver","gold and black","bronze and deep brown","copper and midnight blue","iridescent pearl tones",
-    "frosted lavender and silver","ice blue and charcoal","pewter grey and white","arctic white and navy","glacier blue and silver",
-    "smoked plum and black","deep garnet and gold","evergreen and cream","winter berry and charcoal","frozen mint and grey",
-    "oyster white and slate","midnight sapphire and silver","coal black and crimson","storm grey and ice","cashmere beige and black"
-  ]
+  spring: ["soft blush and ivory","lavender and cream","sage green and white","powder blue and blush","lilac and pale yellow","mint and coral","peach and sky blue","rose quartz and fog","cherry blossom pink and grey","butter yellow and soft white","pastel rainbow mix","pale violet and ecru","soft terracotta and cream","washed rose and linen","dusty pink and warm grey","celadon and ivory","pale aqua and blush","soft periwinkle and white","light moss and cream","nude and soft pink","warm sand and peach","muted coral and sage","blush pink monochrome","soft lilac monochrome","pale mint monochrome","white and gold","cream and silver","soft beige tonal","warm neutral tonal","pale pastels mixed","sakura pink and fresh green","wisteria purple and cream","pale lemon and sky","apricot and mist grey","seafoam and shell pink","pistachio and vanilla","peony pink and sage","lilac grey and butter","dawn pink and cloud white","spring meadow mix","pale peach and eucalyptus","soft mauve and linen","baby blue and buttercream","mint julep and blush","orchid and pale grey","strawberry milk and cream","lavender fog and ivory","pale daffodil and sage","coral blush and sand","soft hydrangea blue"],
+  summer: ["cobalt blue and white","hot coral and gold","sunshine yellow and sky blue","vivid orange and turquoise","electric pink and lime","tropical red and emerald","bright fuchsia and navy","neon yellow and black","aqua and coral","vivid violet and gold","white and bright pop of color","crisp linen white","bleached denim and white","all white","ivory and tan","bold color block","saturated primary mix","tropical multicolor print","vivid stripe","bold geometric color","terracotta and sand","warm amber and cream","golden yellow and rust","burnt orange and ivory","papaya and beige","ocean blue and seafoam","turquoise and sandy beige","lagoon teal and white","deep sea blue and coral","wave blue tonal","jungle green and yellow","palm print green","botanical mix","mango orange and leafy green","tropical floral mix","watermelon pink and mint","sunset orange and purple","coral reef mix","poolside turquoise and white","lemon zest and navy","hibiscus red and palm green","marigold and sky","flamingo pink and sand","coconut white and aqua","sangria and lime","citrus burst mix","island blue and coral","tropicana yellow and green","sea glass and white","hot pink and tangerine"],
+  autumn: ["burnt sienna and cream","rust and camel","deep olive and tan","chocolate brown and ivory","cognac and off-white","burgundy and blush","wine red and grey","deep plum and nude","maroon and cream","oxblood and sand","forest green and rust","hunter green and camel","deep emerald and gold","sage and terracotta","moss and amber","mustard yellow and brown","golden amber and burgundy","harvest orange and chocolate","pumpkin and cream","ochre and navy","warm earthy tonal","brown monochrome","rust monochrome","deep olive monochrome","autumnal color gradient","navy and rust","dark teal and camel","deep indigo and amber","slate blue and terracotta","charcoal and cognac","plaid mix warm tones","houndstooth black and tan","checked russet and cream","tartan earth tones","tweed mixed warm","maple red and gold","chestnut brown and cream","spiced cider and beige","smoky plum and copper","fig and olive","burnt orange and forest","mahogany and mustard","deep cranberry and taupe","amber glow and charcoal","autumn fog grey and rust","pumpkin spice and cream","walnut and sage","brandy and camel","russet and pine","harvest wheat and burgundy"],
+  winter: ["midnight black and ivory","charcoal and white","deep navy and cream","slate grey and silver","graphite and pale blue","pure black monochrome","all grey tonal","black and gold","black and silver","black and deep red","deep burgundy and black","midnight plum and silver","forest green and black","deep teal and charcoal","navy and midnight blue","crisp white and ice blue","winter white tonal","ivory and pearl","snow white and silver","white and pale gold","rich camel and black","warm brown and cream","cognac and ivory","chocolate and off-white","warm taupe and white","deep red and cream","holly green and red","midnight blue and gold","emerald and black","jewel tones mixed","metallic silver","gold and black","bronze and deep brown","copper and midnight blue","iridescent pearl tones","frosted lavender and silver","ice blue and charcoal","pewter grey and white","arctic white and navy","glacier blue and silver","smoked plum and black","deep garnet and gold","evergreen and cream","winter berry and charcoal","frozen mint and grey","oyster white and slate","midnight sapphire and silver","coal black and crimson","storm grey and ice","cashmere beige and black"]
 };
 
-const ACCESSORIES = [
-  // Hair
-  "pearl hair clip","satin scrunchie","claw clip in tortoiseshell","velvet headband","ribbon tied in hair",
-  "silk scarf as hair wrap","knit beanie","wide-brim felt hat","beret","baseball cap worn backwards",
-  "bucket hat","straw sun hat","cowboy hat","fascinator","embellished hair pins",
-  "braided headband","floral hair crown","gold hair cuff","jeweled barrette","French twist pin",
-  // Sunglasses
-  "oversized square sunglasses","cat-eye sunglasses","round retro sunglasses","slim rectangular shades","tiny oval sunglasses",
-  "shield sunglasses","wrap-around sport shades","aviator sunglasses","gradient lens sunglasses","mirrored lens sunglasses",
-  // Glasses
-  "oversized tortoiseshell glasses","thin gold wire round glasses","classic black rectangular frames","clear acetate frames","vintage cat-eye glasses",
-  "thick black square frames","rimless oval glasses","double-bridge glasses","geometric hexagonal frames","coloured tinted glasses",
-  // Jewellery
-  "layered gold chains","chunky silver hoops","pearl drop earrings","geometric statement earrings","mismatched earrings",
-  "stacked bangles","charm bracelet","tennis bracelet","cuff bracelet","beaded bracelets stack",
-  "dainty ring stack","statement cocktail ring","signet ring","knuckle rings","midi rings",
-  "long pendant necklace","choker necklace","statement bib necklace","lariat necklace","charm necklace",
-  // Bags
-  "mini structured bag","slouchy hobo bag","structured top-handle bag","crossbody chain bag","tote bag in canvas",
-  "baguette bag","clutch in satin","belt bag","backpack in leather","mesh tote",
-  // Other
-  "silk neck scarf","wool tartan scarf","long knit scarf","sheer chiffon scarf","bandana",
-  "leather gloves","knit fingerless gloves","long opera gloves","lace gloves","satin evening gloves",
-  "wide leather belt","thin chain belt","corset belt","embroidered belt","woven belt"
-];
+const ACCESSORIES = ["pearl hair clip","satin scrunchie","claw clip in tortoiseshell","velvet headband","ribbon tied in hair","silk scarf as hair wrap","knit beanie","wide-brim felt hat","beret","baseball cap worn backwards","bucket hat","straw sun hat","cowboy hat","fascinator","embellished hair pins","braided headband","floral hair crown","gold hair cuff","jeweled barrette","French twist pin","oversized square sunglasses","cat-eye sunglasses","round retro sunglasses","slim rectangular shades","tiny oval sunglasses","shield sunglasses","wrap-around sport shades","aviator sunglasses","gradient lens sunglasses","mirrored lens sunglasses","oversized tortoiseshell glasses","thin gold wire round glasses","classic black rectangular frames","clear acetate frames","vintage cat-eye glasses","thick black square frames","rimless oval glasses","double-bridge glasses","geometric hexagonal frames","coloured tinted glasses","layered gold chains","chunky silver hoops","pearl drop earrings","geometric statement earrings","mismatched earrings","stacked bangles","charm bracelet","tennis bracelet","cuff bracelet","beaded bracelets stack","dainty ring stack","statement cocktail ring","signet ring","knuckle rings","midi rings","long pendant necklace","choker necklace","statement bib necklace","lariat necklace","charm necklace","mini structured bag","slouchy hobo bag","structured top-handle bag","crossbody chain bag","tote bag in canvas","baguette bag","clutch in satin","belt bag","backpack in leather","mesh tote","silk neck scarf","wool tartan scarf","long knit scarf","sheer chiffon scarf","bandana","leather gloves","knit fingerless gloves","long opera gloves","lace gloves","satin evening gloves","wide leather belt","thin chain belt","corset belt","embroidered belt","woven belt"];
 
-const SHOES = [
-  "pointed-toe kitten heels","block heel mules","strappy heeled sandals","platform heels","cone heel pumps",
-  "chunky lug-sole boots","knee-high leather boots","over-the-knee boots","ankle boots with buckles","combat boots",
-  "white leather sneakers","chunky platform sneakers","retro running shoes","canvas high-tops","slip-on sneakers",
-  "ballet flats","Mary Jane shoes","loafers in leather","penny loafers","horsebit loafers",
-  "strappy flat sandals","gladiator sandals","thong sandals","espadrille wedges","platform sandals",
-  "Chelsea boots","Western cowboy boots","riding boots","lace-up Oxford shoes","brogues",
-  "mules in suede","backless loafers","slides in leather","pool slides","embellished flip flops",
-  "fisherman sandals","Birkenstock-style sandals","woven sandals","leather huaraches","rope-sole sandals",
-  "pointed mules","square-toe flats","round-toe block heels","d'Orsay pumps","slingback heels",
-  "thigh-high boots","sock boots","Chelsea heeled boots","heeled ankle boots","zip-up knee boots",
-  "platform Mary Janes","chunky loafers","lug-sole loafers","creeper shoes","platform Oxford shoes",
-  "metallic heels","glitter boots","patent leather pumps","vinyl knee boots","mirror-finish shoes",
-  "sneaker heels","hybrid sneaker boot","dad shoes","trail runners","hiking sandals",
-  "pointed-toe flats","ballet pumps","bow-front flats","embellished flats","velvet flats",
-  "woven leather flats","jelly shoes","transparent PVC mules","lucite heels","perspex platform shoes",
-  "ankle-strap heels","T-bar heels","wrap-around sandal heels","cross-strap sandals","barely-there heels",
-  "sock sneakers","knit slip-on shoes","woven fabric flats","crochet sandals","macramé sandals",
-  "wooden-sole clogs","Swedish clogs","leather clogs","embroidered clogs","painted clogs",
-  "pointed-toe boots","Chelsea boot with chain","studded boots","embroidered Western boots","painted cowboy boots"
-];
+const SHOES = ["pointed-toe kitten heels","block heel mules","strappy heeled sandals","platform heels","cone heel pumps","chunky lug-sole boots","knee-high leather boots","over-the-knee boots","ankle boots with buckles","combat boots","white leather sneakers","chunky platform sneakers","retro running shoes","canvas high-tops","slip-on sneakers","ballet flats","Mary Jane shoes","loafers in leather","penny loafers","horsebit loafers","strappy flat sandals","gladiator sandals","thong sandals","espadrille wedges","platform sandals","Chelsea boots","Western cowboy boots","riding boots","lace-up Oxford shoes","brogues","mules in suede","backless loafers","slides in leather","pool slides","embellished flip flops","fisherman sandals","Birkenstock-style sandals","woven sandals","leather huaraches","rope-sole sandals","pointed mules","square-toe flats","round-toe block heels","d'Orsay pumps","slingback heels","thigh-high boots","sock boots","Chelsea heeled boots","heeled ankle boots","zip-up knee boots","platform Mary Janes","chunky loafers","lug-sole loafers","creeper shoes","platform Oxford shoes","metallic heels","glitter boots","patent leather pumps","vinyl knee boots","mirror-finish shoes","sneaker heels","hybrid sneaker boot","dad shoes","trail runners","hiking sandals","pointed-toe flats","ballet pumps","bow-front flats","embellished flats","velvet flats","woven leather flats","jelly shoes","transparent PVC mules","lucite heels","perspex platform shoes","ankle-strap heels","T-bar heels","wrap-around sandal heels","cross-strap sandals","barely-there heels","sock sneakers","knit slip-on shoes","woven fabric flats","crochet sandals","macramé sandals","wooden-sole clogs","Swedish clogs","leather clogs","embroidered clogs","painted clogs","pointed-toe boots","Chelsea boot with chain","studded boots","embroidered Western boots","painted cowboy boots"];
 
-const SEASON_COLORS = { spring: "#f9a8d4", summer: "#86efac", autumn: "#fcd34d", winter: "#93c5fd" };
+const FIELD_COLORS = ["#c084fc","#f9a8d4","#86efac","#fda4af","#fcd34d","#67e8f9","#a5f3fc","#d9f99d"];
 
-const FIELD_COLORS = ["#c084fc","#f9a8d4","#86efac","#fda4af","#fcd34d","#67e8f9","#a5f3fc","#d9f99d","#fed7aa"];
+function reroll(key){
+  const sources = {style:STYLES, top:TOPS, bottom:BOTTOMS, fabric:FABRICS, shoe:SHOES};
+  if(sources[key]) lastVals[key] = pick(sources[key]);
+  else if(key==='color') lastVals.color = pick(COLORS[currentSeason]);
+  else if(key==='acc') lastVals.acc = pickN(ACCESSORIES, Math.random()<0.5?2:3).join(", ");
+  else if(key==='outer'){
+    if(currentSeason==='summer') lastVals.outer = null;
+    else lastVals.outer = Math.random()<0.6? pick(OUTERWEAR[currentSeason]) : null;
+  }
+  buildPrompt();
+}
 
-function generate() {
+function buildPrompt(){
+  const v = lastVals;
+  const seasonLabel = {spring:"Spring",summer:"Summer",autumn:"Autumn",winter:"Winter"}[currentSeason];
+  const parts = [`${seasonLabel} outfit`, v.style, v.top, v.bottom];
+  if(v.outer) parts.push(v.outer);
+  parts.push(`${v.fabric} fabric`, `color palette: ${v.color}`, v.acc, v.shoe, "full body shot, fashion photography, detailed clothing");
+  currentPrompt = parts.join(", ");
+  document.getElementById("promptTextarea").value = currentPrompt;
+  renderFields();
+}
+
+function renderFields(){
+  const v = lastVals;
+  const accent = getComputedStyle(document.documentElement).getPropertyValue('--'+currentSeason);
+  const fields = [
+    {l:"スタイル",v:v.style,c:FIELD_COLORS[0],k:"style"},
+    {l:"トップス",v:v.top,c:FIELD_COLORS[1],k:"top"},
+    {l:"ボトムス",v:v.bottom,c:FIELD_COLORS[2],k:"bottom"},
+    {l:"アウター",v:v.outer||"— none —",c:v.outer?accent:"#2a2535",k:"outer"},
+    {l:"素材",v:v.fabric,c:FIELD_COLORS[3],k:"fabric"},
+    {l:"カラー",v:v.color,c:accent,k:"color"},
+    {l:"アクセサリー",v:v.acc,c:FIELD_COLORS[5],k:"acc"},
+    {l:"シューズ",v:v.shoe,c:FIELD_COLORS[6],k:"shoe"},
+  ];
+  document.getElementById("result").innerHTML = `
+    <div class="fields animate-in">${fields.map(f=>`
+      <div class="field-row">
+        <div class="field-label">${f.l}</div>
+        <div class="field-value" style="color:${f.c}">${f.v}</div>
+        <button class="reroll-btn" onclick="reroll('${f.k}')">🔄</button>
+      </div>`).join("")}</div>
+    <hr class="divider">
+    <div class="prompt-label">画像AIにコピー</div>
+    <textarea class="prompt-textarea" id="promptTextarea" oninput="currentPrompt=this.value"></textarea>
+    <button class="copy-btn" id="copyBtn" onclick="copyPrompt()">Copy</button>`;
+  document.getElementById("promptTextarea").value = currentPrompt;
+}
+
+function generate(){
   generated++;
   document.getElementById("counter").textContent = `${generated} generated`;
-
   const style = pick(STYLES);
   const top = pick(TOPS);
   const bottom = pick(BOTTOMS);
   const fabric = pick(FABRICS);
-  const colorPalette = pick(COLORS[currentSeason]);
-  const acc = pickN(ACCESSORIES, Math.random() < 0.5 ? 2 : 3);
+  const color = pick(COLORS[currentSeason]);
+  const acc = pickN(ACCESSORIES, Math.random()<0.5?2:3).join(", ");
   const shoe = pick(SHOES);
-
-  // Outerwear logic
   let outer = null;
-  if (currentSeason === "summer") {
-    outer = null;
-  } else if (currentSeason === "winter") {
-    outer = pick(OUTERWEAR.winter);
-  } else {
-    // spring/autumn: 50% chance
-    if (Math.random() < 0.5) {
-      outer = pick(OUTERWEAR[currentSeason]);
-    }
-  }
-
-  const seasonLabel = { spring: "Spring", summer: "Summer", autumn: "Autumn", winter: "Winter" }[currentSeason];
-
-  // Build prompt
-  const parts = [`${seasonLabel} outfit`];
-  parts.push(style);
-  parts.push(top);
-  parts.push(bottom);
-  if (outer) parts.push(outer);
-  parts.push(`${fabric} fabric`);
-  parts.push(`color palette: ${colorPalette}`);
-  parts.push(acc.join(", "));
-  parts.push(shoe);
-  parts.push("full body shot, fashion photography, detailed clothing");
-  currentPrompt = parts.join(", ");
-
-  const accentColor = SEASON_COLORS[currentSeason];
-
-  const fields = [
-    { label: "スタイル", value: style, color: FIELD_COLORS[0] },
-    { label: "トップス", value: top, color: FIELD_COLORS[1] },
-    { label: "ボトムス", value: bottom, color: FIELD_COLORS[2] },
-  ];
-  if (outer) fields.push({ label: "アウター", value: outer, color: accentColor, rare: currentSeason !== "winter" });
-  fields.push(
-    { label: "素材", value: fabric, color: FIELD_COLORS[3] },
-    { label: "カラー", value: colorPalette, color: accentColor },
-    { label: "アクセサリー", value: acc.join(", "), color: FIELD_COLORS[5] },
-    { label: "シューズ", value: shoe, color: FIELD_COLORS[6] }
-  );
-
-  const fieldsHTML = fields.map(f => `
-    <div class="field">
-      <div class="field-label">${f.label}</div>
-      <div class="field-value" style="color:${f.color}">
-        ${f.value}${f.rare ? `<span class="rare-badge" style="color:${f.color}">seasonal</span>` : ""}
-      </div>
-    </div>
-  `).join("");
-
-  document.getElementById("result").innerHTML = `
-    <div class="fields animate-in">${fieldsHTML}</div>
-    <hr class="divider">
-    <div class="prompt-label">画像AIにコピー</div>
-    <div class="prompt-text">${currentPrompt}</div>
-    <button class="copy-btn" id="copyBtn" onclick="copyPrompt()">Copy</button>
-  `;
-
-  document.getElementById("emptyState").style.display = "none";
-  document.getElementById("result").style.display = "block";
-  document.getElementById("saveBtn").style.display = "block";
+  if(currentSeason!=="summer" && Math.random()<0.55) outer = pick(OUTERWEAR[currentSeason]);
+  lastVals = {style,top,bottom,fabric,color,acc,shoe,outer};
+  buildPrompt();
+  document.getElementById("emptyState").style.display="none";
+  document.getElementById("result").style.display="block";
+  document.getElementById("saveBtn").style.display="block";
 }
 
-function copyPrompt() {
-  if (!currentPrompt) return;
-  navigator.clipboard.writeText(currentPrompt).then(() => {
-    const btn = document.getElementById("copyBtn");
-    btn.textContent = "Copied ✓";
-    btn.classList.add("copied");
-    setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("copied"); }, 2000);
+function copyPrompt(){
+  if(!currentPrompt) return;
+  navigator.clipboard.writeText(currentPrompt).then(()=>{
+    const b=document.getElementById("copyBtn");
+    b.textContent="Copied ✓";b.classList.add("copied");
+    setTimeout(()=>{b.textContent="Copy";b.classList.remove("copied")},2000);
   });
 }
 
-function savePrompt() {
-  if (!currentPrompt) return;
-  let saved = JSON.parse(localStorage.getItem("outfit_arch_v1") || "[]");
-  if (saved.includes(currentPrompt)) return;
-  saved.unshift(currentPrompt);
-  localStorage.setItem("outfit_arch_v1", JSON.stringify(saved.slice(0, 30)));
+function savePrompt(){
+  if(!currentPrompt) return;
+  let s=JSON.parse(localStorage.getItem("outfit_arch_v1")||"[]");
+  if(!s.includes(currentPrompt)){s.unshift(currentPrompt);localStorage.setItem("outfit_arch_v1",JSON.stringify(s.slice(0,30)));}
   renderSaved();
 }
 
-function renderSaved() {
-  const saved = JSON.parse(localStorage.getItem("outfit_arch_v1") || "[]");
-  const section = document.getElementById("savedSection");
-  const list = document.getElementById("savedList");
-  if (saved.length === 0) { section.style.display = "none"; return; }
-  section.style.display = "block";
-  list.innerHTML = saved.map((p, i) => `<div class="saved-item" data-index="${i}">${p}</div>`).join("");
-  document.querySelectorAll(".saved-item").forEach(el => {
-    el.onclick = () => navigator.clipboard.writeText(saved[el.dataset.index]);
-  });
+function renderSaved(){
+  const s=JSON.parse(localStorage.getItem("outfit_arch_v1")||"[]");
+  const sec=document.getElementById("savedSection");
+  const list=document.getElementById("savedList");
+  if(s.length===0){sec.style.display="none";return;}
+  sec.style.display="block";
+  list.innerHTML=s.map((p,i)=>`<div class="saved-item" data-i="${i}">${p}</div>`).join("");
+  document.querySelectorAll(".saved-item").forEach(el=>el.onclick=()=>navigator.clipboard.writeText(s[el.dataset.i]));
 }
-
 renderSaved();
 </script>
-
 </body>
 </html>
